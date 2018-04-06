@@ -39,7 +39,7 @@ a{
   min-height: 962px;
   color: $white;
   background: url("../i/header-bg.jpg") no-repeat top center;
-  background-size: cover;
+  //background-size: cover;
 }
 
 /*header-top
@@ -48,14 +48,58 @@ a{
   display: flex;
   justify-content: flex-end;
   padding: 12px 0;
-  margin-bottom: 10px;
+  margin-bottom: -4px;
   margin-left: 238px;
+  
+  @media screen and (max-width: 1262px) {
+     margin-left: 200px;     
+  }    
+
+  @media screen and (max-width: 1224px) {
+     margin-left: 180px;     
+  }    
+
+  @media screen and (max-width: 1100px) {
+     margin-left: 170px;     
+  }
+
+  @media screen and (max-width: 1054px) {
+     margin-left: 148px;     
+  }
+
+  @media screen and (max-width: 1030px) {
+     margin-left: 200px; 
+  }
+  
+  @media screen and (max-width: 478px) {
+     margin-left: 150px; 
+  }
+
+  @media screen and (max-width: 420px) {
+     margin-left: 120px; 
+  }
+
+  @media screen and (max-width: 390px) {
+     margin-left: 90px; 
+  }
 
   &__item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-right: 62px;
+
+    @media screen and (max-width: 1224px) {
+       margin-right: 30px;     
+    }    
+
+    @media screen and (max-width: 1110px) {
+       margin-right: 15px;     
+    }    
+
+    @media screen and (max-width: 1030px) {
+       margin-bottom: 20px;     
+    }
 
     &.clock {
       width: 165px;
@@ -85,8 +129,32 @@ a{
 
     &.certificat {
       width: 448px;
+
+      @media screen and (max-width: 666px) {
+        width: 350px;        
+      }   
+
+      @media screen and (max-width: 568px) {
+        width: 250px;        
+      }    
+
+      @media screen and (max-width: 440px) {
+        width: 224px;        
+      }    
       .content {
         width: 400px;
+
+        @media screen and (max-width: 666px) {
+          width: 290px;        
+        }  
+
+        @media screen and (max-width: 568px) {
+          width: 190px;        
+        }      
+
+        @media screen and (max-width: 400px) {
+          width: 160px;        
+        } 
       }
     }
 
@@ -108,6 +176,7 @@ a{
 =======================================*/ 
 .header-menu-wrap {
   padding: 4px 0;
+  margin-bottom: 50px;
   background: rgba(255,255,255,.2);
 }
 
@@ -119,7 +188,11 @@ a{
   .logo-wrap {
     position: absolute;
     top: -34px;
-    left: -60px;
+    left: -48px;
+
+    @media screen and (max-width: 660px) {
+       left:0;     
+    }    
 
     
     .logo-shaddow {
@@ -144,6 +217,7 @@ a{
       }
     }
   }
+
   .logo {
     position: relative;
     display: flex;
@@ -179,16 +253,73 @@ a{
 /*header-menu-bar
 =======================================*/ 
 
+/*menu-btn
+=======================================*/ 
+.menu-btn {
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+    top: 12px;
+    right: 50px;
+     display: block;
+     width: 30px;
+     height: 30px;
+     font-size: 30px;
+     color: #888
+  }    
+
+  @media screen and (min-width: 1200px) {
+     display: none;     
+  }    
+}
+/*menu-btn
+=======================================*/ 
+
 /*header-menu
 =======================================*/ 
-.header-menu {
+.header-menu__navbar {
+  position: relative;
   margin-left: 100px;
   padding-left: 12px;
   background: $white;
 
+  @media screen and (max-width: 1200px) {
+    width: 500px;    
+  }    
+  
+  @media screen and (max-width: 992px) {
+    width: 290px;
+    height: 62px; 
+  }    
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }    
+
+}
+
+.header-menu {
+  position: relative;
+  z-index: 30;
+  background: $white;
+  @media screen and (max-width: 1200px) {
+     display: none;     
+  }    
+
+  @media screen and (max-width: 1200px) {
+     margin-top: 40px;
+  }    
+
+  @media screen and (min-width: 1200px) {
+     margin-top: 0!important;
+  }    
+
   li {
     display: inline-block;
     vertical-align: middle;
+
+    @media screen and (max-width: 1200px) {
+       display: block;     
+    }    
 
     &.active a,
     a:hover{
@@ -231,12 +362,23 @@ a{
 /*register-block
 =======================================*/ 
 .register-block {
+  position: relative;
+  z-index: 20;
+
+  @media screen and (max-width: 992px) {
+     margin-left: 200px;     
+  }    
+
+  @media screen and (max-width: 400px) {
+     margin-left: 160px;     
+  }    
   &__item {
     display: inline-block;
     vertical-align: middle;
     height: 62px;
     line-height: 62px;
     text-transform: uppercase;
+    cursor: pointer;
 
     /*register-block.login
     =======================================*/ 
@@ -245,6 +387,11 @@ a{
       position: relative;
       color: #69696b;
       background: $white;
+
+      @media screen and (max-width: 992px) {
+        color: $white;
+         background: none;
+      }    
 
       span {
         padding: 0 10px;
@@ -260,6 +407,10 @@ a{
         border: 31px solid transparent;
         border-left-width: 20px;
         border-left-color: $white;
+
+        @media screen and (max-width: 992px) {
+           border-color: transparent;     
+        }    
       }
 
       .icon-key {
@@ -295,14 +446,324 @@ a{
       display: inline-block;
       vertical-align: middle;
     }
-
-    
-
   }
 }
 /*register-block
 =======================================*/ 
 
+/*header-middle
+=======================================*/ 
+.header-middle {
+  .exchange {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -20px;
+
+    &__item {
+      h6 {
+        margin-bottom: 6px;
+        font-size: 18px;
+        @include intro;
+        font-weight: 400;
+        text-transform: uppercase;
+        @media screen and (max-width: 570px) {
+           margin: 0 30px 6px;     
+        }    
+      }
+
+
+      &-number {
+        width: 450px;
+        height: 101px;
+        @include roboto-black;
+        font-size: 40px;
+
+        span {
+          display: inline-block;
+          vertical-align: top;
+          margin-top: 8px;
+        }
+
+        .fa {
+          color: #000;
+          opacity: .12;
+        }
+      }
+      
+      &.left {
+        .exchange__item-number {
+          width: 440px;
+          text-align: right;
+          background: url("../i/exchange-item-left.png") no-repeat top right;
+
+          @media screen and (max-width: 978px) {
+             width: 240px;
+             font-size: 30px;     
+          }    
+
+          @media screen and (max-width: 460px) {
+             width: 180px;
+             font-size: 20px;     
+          }    
+
+          span {
+            margin-right: 60px;
+          }
+
+          .fa {
+            margin-right: 15px;
+          }
+        }
+      }  
+
+      &.right {
+        text-align: right;
+
+        .exchange__item-number {
+          width: 440px;
+          text-align: left;
+          background: url("../i/exchange-item-right.png") no-repeat top left;
+
+          @media screen and (max-width: 978px) {
+             width: 240px;     
+             font-size: 30px;
+          }    
+
+          @media screen and (max-width: 460px) {
+             width: 180px;
+             font-size: 20px;     
+          }    
+
+          span {
+            margin-left: 60px;
+          }
+
+          .fa {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 15px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    /*exchange__item
+    =======================================*/ 
+  }
+  /*exchange
+  =======================================*/ 
+  h1 {
+    width: 100%;
+    @include intro;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__content {
+    margin-bottom: -30px;
+  }
+
+  &__text {
+    margin: 0 auto 30px;
+    max-width: 590px;
+    text-align: center;
+    line-height: 23px;
+  }
+  
+  .btn {
+    display: table;
+    margin: 0 auto;
+    width: 206px;
+    height: 43px;
+    line-height: 43px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: $white;
+    background: url("../i/btn-bg.png") no-repeat center;
+  }
+
+  .exchange.bottom {
+    .fa-sort-up {
+      margin-top: 20px;
+    }
+    
+    .exchange__item.right .exchange__item-number .fa.fa-sort-down {
+      margin-top: 0;
+    }
+
+    .exchange__item {
+      span {
+        font-size: 31px;
+      }
+    }
+
+    .exchange__item.left {
+      
+      .exchange__item-number {
+        width: 358px;
+        height: 52px;
+        background: url("../i/exchange-right-small-bg.png") no-repeat top left;
+
+        .fa {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .exchange__item.right {
+
+      .exchange__item-number {
+        width: 358px;
+        height: 52px;
+        background: url("../i/exchange-left-small-bg.png") no-repeat top right;
+
+        .fa.fa-sort-down {
+          margin-top: -16px;
+        }
+      }  
+    }
+
+    
+  }
+}
+/*header-middle
+=======================================*/ 
+
+/*statistick
+=======================================*/
+.statistick {
+  position: relative;
+  top: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background: url("../i/statistick__bottom-line.png") no-repeat center;
+  }
+
+  /*statistick__top
+  =======================================*/ 
+  &__top {
+    margin: 30px auto 20px;
+    width: 227px;
+    height: 41px;
+    text-align: center;
+    line-height: 41px;
+    text-transform: uppercase;
+    background: url('../i/statistick-top-bg.png') no-repeat center;
+
+    span {
+      @include intro;
+      opacity: .28;
+    }
+  }
+  /*statistick__top
+  =======================================*/ 
+
+
+  /*statistick__bottom
+  =======================================*/ 
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 772px;
+    height: 132px;
+    background: url("../i/statistick__bottom-bg.png") no-repeat center;
+
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      color: #000;
+      opacity: .12;
+    }
+
+    &-item {
+      width: 290px;
+
+      p {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 23px;
+        font-weight: bold;
+        color: $accent;
+
+        span {
+          font-size: 11px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      & > span {
+        text-transform: uppercase;
+        color: #000;
+        opacity: .12;
+      }
+    }
+
+    &-left {
+      text-align: right;
+    }
+
+    &-right {
+      text-align: left;
+    }
+  }
+  /*statistick__bottom
+  =======================================*/ 
+  
+  /*statistick__clock
+  =======================================*/ 
+  &__clock {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    width: 176px;
+    height: 176px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: $accent;
+    background: url("../i/statistick-clock.png") no-repeat center;
+
+    h4 {
+      margin-top: 50px;
+      margin-bottom: 0;
+      font-size: 20px;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .num {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .days {
+      margin-bottom: 10px;
+      vertical-align: bottom;
+      font-weight: bold;
+    }
+  }
+  /*statistick__clock
+  =======================================*/ 
+}
+/*statistick
+=======================================*/ 
 
 
 

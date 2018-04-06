@@ -17,15 +17,10 @@ $(function () {
     fixedBackground: true
   });
 
-  /*active menu
+  /*toggle header-menu
   =======================================*/ 
-  $('#js-top-nav_menu li').each(function () {
-      var location = window.location.pathname;
-      var location = location.substring(1);
-      var link = $(this).children('a').attr('href');
-      if(location === link) {
-          $(this).addClass('active');
-      }
+  $('#js-menu-btn').on('click', function(){
+    $('#js-header-menu').slideToggle();
   });
   
 });

@@ -134,11 +134,6 @@ gulp.task("css:build", function(){
 ====================================================*/
 gulp.task("css", function(){
     gulp.src(path.src.css)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(notify({
-            title: "scss",
-            message: "style.scss"
-        }))
         .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass())
@@ -221,19 +216,19 @@ gulp.task("image:build", function(){
 
 /* sprite
 ====================================================*/
-/*gulp.task('sprite', function(){
+gulp.task('sprite', function(){
     let spriteData = gulp.src('src/assets/i/icons/*.*')
         .pipe(plumber())
         .pipe(spritesmith({
             imgName: '../i/sprite.png',
-            cssName: 'sprite.scss',
+            cssName: '_sprite.scss',
             cssFormat: 'scss',
             algorithm: 'binary-tree',
             padding: 20
         }));
     spriteData.img.pipe(gulp.dest('src/assets/i'));
     spriteData.css.pipe(gulp.dest('src/assets/sass/partials/'));
-});*/
+});
 
 gulp.task("clean", function(cb){
     rimraf(path.clean, cb);

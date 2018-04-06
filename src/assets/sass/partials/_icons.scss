@@ -1,0 +1,28 @@
+@import "sprite";
+
+.icon-small {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+
+.icon-clock {
+  @include sprite($clock);
+}
+
+.icon-location {
+  @include sprite($location);
+}
+
+.icon-lion {
+  @include sprite($lion);
+}
+
+.icon-key {
+  @include sprite($key);
+}
+
+.icon-user {
+  @include sprite($user);
+}

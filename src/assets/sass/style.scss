@@ -39,7 +39,11 @@ a{
   min-height: 962px;
   color: $white;
   background: url("../i/header-bg.jpg") no-repeat top center;
-  //background-size: cover;
+
+  @media screen and (max-width: 789px) {
+     height: 1190px;
+     background-size: cover;
+  }    
 }
 
 /*header-top
@@ -81,6 +85,10 @@ a{
 
   @media screen and (max-width: 390px) {
      margin-left: 90px; 
+  }
+
+  @media screen and (max-width: 620px) {
+     margin-top: -20px; 
   }
 
   &__item {
@@ -178,6 +186,14 @@ a{
   padding: 4px 0;
   margin-bottom: 50px;
   background: rgba(255,255,255,.2);
+
+  @media screen and (max-width: 1060px) {
+     margin-bottom: 30px;
+  }    
+
+  @media screen and (max-width: 992px) {
+     margin-bottom: -6px;
+  }    
 }
 
 /*header-menu-bar
@@ -258,13 +274,14 @@ a{
 .menu-btn {
   @media screen and (max-width: 1200px) {
     position: absolute;
-    top: 12px;
+    top: 6px;
     right: 50px;
      display: block;
      width: 30px;
      height: 30px;
      font-size: 30px;
-     color: #888
+     color: #888;
+     z-index: 20;
   }    
 
   @media screen and (min-width: 1200px) {
@@ -281,6 +298,7 @@ a{
   margin-left: 100px;
   padding-left: 12px;
   background: $white;
+  z-index: 10;
 
   @media screen and (max-width: 1200px) {
     width: 500px;    
@@ -564,6 +582,14 @@ a{
 
   &__content {
     margin-bottom: -30px;
+
+    @media screen and (max-width: 552px) {
+       margin-bottom: -4px;
+    }    
+
+    @media screen and (max-width: 482px) {
+       margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -598,7 +624,12 @@ a{
     .exchange__item {
       span {
         font-size: 31px;
+        
+        @media screen and (max-width: 496px) {
+           font-size: 20px;   
+        }
       }
+
     }
 
     .exchange__item.left {
@@ -606,8 +637,16 @@ a{
       .exchange__item-number {
         width: 358px;
         height: 52px;
-        background: url("../i/exchange-right-small-bg.png") no-repeat top left;
+        background: url("../i/exchange-right-small-bg.png") no-repeat top right;
 
+        @media screen and (max-width: 784px) {
+           width: 258px;   
+        }    
+          
+        @media screen and (max-width: 496px) {
+           width: 158px;   
+        }
+          
         .fa {
           margin-top: 15px;
         }
@@ -619,7 +658,15 @@ a{
       .exchange__item-number {
         width: 358px;
         height: 52px;
-        background: url("../i/exchange-left-small-bg.png") no-repeat top right;
+        background: url("../i/exchange-left-small-bg.png") no-repeat top left;
+
+        @media screen and (max-width: 784px) {
+           width: 258px;   
+        }
+
+        @media screen and (max-width: 496px) {
+           width: 158px;   
+        }    
 
         .fa.fa-sort-down {
           margin-top: -16px;
@@ -637,7 +684,7 @@ a{
 =======================================*/
 .statistick {
   position: relative;
-  top: 10px;
+  top: 10px;    
 
   &::before {
     content: '';
@@ -678,6 +725,24 @@ a{
     width: 772px;
     height: 132px;
     background: url("../i/statistick__bottom-bg.png") no-repeat center;
+    filter: drop-shadow(0 5px 16px rgba(0,0,0,0.2));
+
+    @media screen and (max-width: 788px) {
+        margin-top: 145px;
+        padding-top: 20px;
+        width: auto;
+        background: none;
+      }      
+
+    @media screen and (max-width: 789px) {
+       background: $white;
+    }    
+
+    @media screen and (max-width: 608px) {
+       flex-direction: column;
+       align-items: center;
+       height: auto;
+    }    
 
     h3 {
       margin-top: 10px;
@@ -715,6 +780,10 @@ a{
 
     &-left {
       text-align: right;
+
+      @media screen and (max-width: 608px) {
+        text-align: left;
+      }    
     }
 
     &-right {
@@ -736,6 +805,19 @@ a{
     transform: translate(-50%, -50%);
     color: $accent;
     background: url("../i/statistick-clock.png") no-repeat center;
+    filter: drop-shadow(0 5px 16px rgba(0,0,0,0.2));
+
+    @media screen and (max-width: 775px) {
+       top: 39%;
+    }    
+
+    @media screen and (max-width: 610px) {
+       top: 36%;
+    }    
+
+    @media screen and (max-width: 610px) {
+       top: 26%;
+    } 
 
     h4 {
       margin-top: 50px;

@@ -46,6 +46,7 @@ a{
 }
 
 h2 {
+  position: relative;
   display: table;
   @include intro;
   font-size: 30px;
@@ -56,6 +57,7 @@ h2 {
   &::before {
     content: '';
     position: absolute;
+    top: -21px;
     width: 40px;
     height: 80px;
   }
@@ -931,7 +933,6 @@ h2 {
   h2 {
     margin-bottom: 30px;
     &::before {
-      top: 0;
       left: 0;
       background: url("../i/about-title-bg.png") no-repeat top left;
     }
@@ -952,17 +953,214 @@ h2 {
 /*about
 =======================================*/ 
 
-/*main-middle-bg
-=======================================*/ 
-.main-middle-bg {
-  position: relative;
-  width: 100%;
-  height: 286px;
-  background: url('../i/main-middle-bg.jpg') no-repeat center;
-  background-size: cover;
-  z-index: 9;
+/*tarrif
+=======================================*/
+.tarrif {
+  padding-top: 300px;
+  min-height: 1147px;
+  background: url('../i/tarrif-bg.png') no-repeat top center;
+  
+  h2 {
+    margin-left: auto;
+    margin-bottom: 130px;
+
+    &::before {
+      right: 0;
+      background: url('../i/tarrif-title-bg.png') no-repeat top right;
+    }
+  }
+
+  /*tarrif__item
+  =======================================*/ 
+  &__item {
+    position: relative;
+    margin-bottom: 90px;
+    width: 263px;
+    height: 358px;
+    text-align: center;
+    background: url('../i/tarrif-item-bg.png') top center no-repeat;
+
+    @media screen and (max-width: $xl) {
+       margin: 0 auto 90px;
+    }    
+
+    /*tarrfi__item-content
+    =======================================*/ 
+
+    h3 {
+      margin-top: 10px;
+      @include intro;
+      font-size: 23px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000;
+      opacity: .12;
+
+    }
+
+    /*tarrif__item-inner
+    =======================================*/ 
+    &-inner {
+      position: absolute;
+      top: -40px;
+      width: 262px;
+      height: 358px;
+      background: url('../i/tarrif-inner-bg.png') top center no-repeat;
+      overflow: hidden;
+
+      .show-tarrif-list {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -16px;
+        width: 32px;
+         height: 32px;
+         background: url('../i/tarrif-btn-up.png') top center no-repeat; 
+         z-index: 20;
+
+         &.active {
+            background: url('../i/tarrif-btn-down.png') top center no-repeat;           
+         }
+      }
+    }
+    /*tarrif__item-inner
+    =======================================*/ 
+
+    .percent {
+      margin-top: 34px;
+      margin-bottom: 20px;
+      font-size: 35px;
+      color: $white;
+
+      .num {
+        font-size: 60px;
+        font-weight: bold;
+      }
+    }
+
+    &-deposit {
+      position: relative;
+      font-size: 10px;
+      text-transform: uppercase;
+
+      ul{
+        margin-bottom: 5px;
+      }
+
+      li {
+        display: flex;
+        margin: 0 auto 6px;
+        padding: 8px 11px;
+        justify-content: space-between;
+        width: 200px;
+        background: #ededed;
+        border-radius: 10px;
+      }
+
+      .btn.btn__violet {
+        width: 180px;
+        height: 35px;
+        line-height: 35px;
+        background-size: cover;
+      }
+    }
+
+    &-list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 98%;
+      padding: 0 15px;
+      background: url('../i/tarrif__item-list-bg.png');
+      z-index: 10;
+      
+      &.active {
+        display: block;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        &:first-child {
+          padding: 20px 25px;
+        }
+
+        &:nth-child(2) {
+          padding: 20px 17px;
+        }
+
+        &:nth-child(3) {
+          padding: 20px 12px;
+        }
+
+        &:nth-child(4) {
+          padding: 20px 8px;
+        }
+
+        .left {
+          color: #aeaeae;
+        }
+
+        .right {
+          font-weight: bold;
+          color: $accent;
+        }
+      }
+    }
+  }
+  /*tarrif__item
+  =======================================*/ 
 }
-/*main-middle-bg
+
+/*select-plan
+=======================================*/ 
+.select-plan {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+
+  .form-group {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  select,
+  input {
+    width: 280px;
+    height: 40px;
+    text-indent: 12px;
+    color: #bfbfbf;
+    box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.02);
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #efefef;
+  }
+
+  .money {
+    margin-bottom: 20px;
+    color: $accent;
+
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+/*select-plan
 =======================================*/ 
 
+/*tarrif
+=======================================*/
 

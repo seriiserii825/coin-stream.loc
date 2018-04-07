@@ -22,5 +22,24 @@ $(function () {
   $('#js-menu-btn').on('click', function(){
     $('#js-header-menu').slideToggle();
   });
+
+  /*show tarrif list
+  =======================================*/ 
+  var jsItemContent = $('#js-tarrif__item-content');
+  var jsItemList = $('#js-tarrif__item-list');
+  var jsShowTarrifList = $('.show-tarrif-list');
+
+  jsShowTarrifList.on('click', function(e){
+    e.preventDefault();
+    
+    if($(this).next().hasClass('active')){
+       $(this).next().slideUp('fast').removeClass('active');
+       jsShowTarrifList.removeClass('active');
+    }else{
+       $(this).addClass('active');
+       $(this).next().slideDown('slow').addClass('active');      
+    }
+  });
+
   
 });

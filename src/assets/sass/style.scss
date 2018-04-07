@@ -904,16 +904,30 @@ h2 {
 =======================================*/ 
 .about {
   position: relative;
+  padding-bottom: 80px;
+  background: url('../i/about-bg.png') no-repeat 200% 0%;
+  z-index: 100;
 
-  img {
-    max-width: 200%;
-    height: auto;
+  @media screen and (max-width: 1400px) {
+     background-position: 240% 0%;
+  }    
 
-    @media screen and (max-width: $lg) {
-       max-width: 100%;
-    }    
-  }
+  @media screen and (max-width: 1400px) {
+     background-position: 300% 0%;
+  }    
 
+  @media screen and (max-width: 1250px) {
+     background-position: 360% 0%;
+  }    
+
+  @media screen and (max-width: 1200px) {
+     background-position: 460% 0%;
+  }    
+
+  @media screen and (max-width: $xl) {
+    padding-bottom: 0;
+     background: none;
+  }    
   h2 {
     margin-bottom: 30px;
     &::before {

@@ -26,3 +26,20 @@
 .icon-user {
   @include sprite($user);
 }
+
+.icon-security {
+  @include sprite($security);
+}
+
+.icon-people {
+  @include sprite($people);
+}
+
+.icon-pen {
+  @include sprite($pen);
+}
+
+.icon-coins {
+  @include sprite($coins);
+}
+

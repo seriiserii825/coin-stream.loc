@@ -24,12 +24,40 @@ ul {
   list-style-type: none;
 }
 
+.btn {
+  &.btn__violet {
+    display: inline-block;
+    width: 206px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: $white;
+    background: url("../i/btn-violet-bg.png") no-repeat center;
+  }
+}
+
 a{
   text-decoration: none;
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+}
+
+h2 {
+  display: table;
+  @include intro;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: $white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 80px;
   }
 }
 
@@ -43,6 +71,18 @@ a{
   @media screen and (max-width: 789px) {
      height: 1190px;
      background-size: cover;
+  }    
+
+  @media screen and (max-width: 620px) {
+     height: 1240px;
+  }    
+
+  @media screen and (max-width: 570px) {
+     height: 1330px;
+  }    
+
+  @media screen and (max-width: 476px) {
+     height: 1480px;
   }    
 }
 
@@ -686,7 +726,7 @@ a{
   position: relative;
   top: 10px;    
 
-  &::before {
+   &::before {
     content: '';
     position: absolute;
     top: 50px;
@@ -726,6 +766,10 @@ a{
     height: 132px;
     background: url("../i/statistick__bottom-bg.png") no-repeat center;
     filter: drop-shadow(0 5px 16px rgba(0,0,0,0.2));
+    
+    @media screen and (max-width: 788px) {
+        height: 160px;
+      }      
 
     @media screen and (max-width: 788px) {
         margin-top: 145px;
@@ -847,5 +891,64 @@ a{
 /*statistick
 =======================================*/ 
 
+/*main
+=======================================*/ 
+.main {
+  padding-top: 40px;
+  background: $white;
+}
+/*main
+=======================================*/ 
+
+/*about
+=======================================*/ 
+.about {
+  position: relative;
+
+  img {
+    max-width: 200%;
+    height: auto;
+
+    @media screen and (max-width: $lg) {
+       max-width: 100%;
+    }    
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    &::before {
+      top: 0;
+      left: 0;
+      background: url("../i/about-title-bg.png") no-repeat top left;
+    }
+  }
+
+  p {
+    line-height: 23px;
+  }
+
+  .btn {
+    &.btn__violet {
+      @media screen and (max-width: $lg) {
+         margin-bottom: 60px;
+      }    
+    }
+  }
+}
+/*about
+=======================================*/ 
+
+/*main-middle-bg
+=======================================*/ 
+.main-middle-bg {
+  position: relative;
+  width: 100%;
+  height: 286px;
+  background: url('../i/main-middle-bg.jpg') no-repeat center;
+  background-size: cover;
+  z-index: 9;
+}
+/*main-middle-bg
+=======================================*/ 
 
 

@@ -43,3 +43,16 @@
   @include sprite($coins);
 }
 
+.icon-pm {
+  @include sprite($pm);
+}
+.icon-a {
+  @include sprite($a);
+}
+.icon-p {
+  @include sprite($p);
+}
+.icon-d {
+  @include sprite($d);
+}
+

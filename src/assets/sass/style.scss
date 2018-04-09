@@ -1278,6 +1278,130 @@ h2 {
 /*advantages
 =======================================*/
 
+/*statistics
+=======================================*/
+.statistics {
+  min-height: 940px;
+  background: #f2f2f2 url('../i/statistics-bg.png') no-repeat bottom center;
+  background-size: cover;
+
+  .col-lg-6:first-child() {
+    @media screen and (min-width: 992px) {
+       padding-right: 0;
+    }    
+  }
+
+  .col-lg-6:last-child() {
+    @media screen and (min-width: 992px) {
+       padding-left: 0;
+    }    
+  }
+
+  h2 {
+    margin: 0 auto 48px;
+    padding-top: 90px;
+    background: none;
+
+    &:before {
+      top: 18px;
+      left: 40%;
+      background: url('../i/statistics-title-bg.png') no-repeat center;
+    }
+  }
+
+  &__table {
+    margin-bottom: 80px;
+    width: 100%;
+    border-collapse: collapse;
+
+    &.right {
+      .icon-table-arrows-up {
+        transform: rotate(180deg);
+      }
+
+      caption {
+        @media screen and (min-width: $lg) {
+           padding-left: 15px;
+        }    
+      }
+    }
+
+    caption {
+      @include intro;
+      font-size: 38px;
+      font-weight: bold;
+      text-align: left;
+      color: #cacaca;
+    }
+
+    tbody {
+      background: $white;
+    }
+
+    td,
+    tr {
+      border: none;
+      border-color: transparent;
+    }
+
+    td {
+      position: relative;
+      padding: 18px 22px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 22px;
+        width: 80%;
+        height: 1px;
+        background: #000;
+        opacity: .04;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      .money {
+        font-weight: bold;
+        color: $accent;
+      }
+
+      .title {
+        text-transform: uppercase;
+      }
+    }
+    /*td
+    =======================================*/ 
+
+    .icon-table-arrows-up {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      vertical-align: middle; 
+      margin-right: 8px;
+      width: 28px;
+      height: 28px;
+      background: url('../i/icon-table-arrow-up.png') no-repeat center;
+    }
+
+    .icon {
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 2px;
+      width: 31px;
+      height: 18px;
+    }
+
+
+  }
+}
+/*statistics
+=======================================*/
+
 
 
 

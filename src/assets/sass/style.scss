@@ -4,6 +4,7 @@
 @import "partials/sprite";
 @import "partials/variables";
 @import "partials/mixins";
+@import '../libs/slick/slick.scss';
 
 html,
 body{
@@ -13,6 +14,7 @@ body{
 body {
   margin: 0;
   padding: 0;
+  padding-bottom: 400px;
   @include roboto-regular; 
   color: $text-color;
   background: $bg-color;
@@ -1291,6 +1293,7 @@ h2 {
     }    
   }
 
+
   .col-lg-6:last-child() {
     @media screen and (min-width: 992px) {
        padding-left: 0;
@@ -1336,6 +1339,7 @@ h2 {
 
     tbody {
       background: $white;
+      //box-shadow: 0 14px 43px rgba(0, 0, 0, 0.18);
     }
 
     td,
@@ -1402,6 +1406,76 @@ h2 {
 /*statistics
 =======================================*/
 
+/*clients
+=======================================*/
+.clients {
+  h5 {
+    display: table;
+    margin: 0 auto;
+    width: 230px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    background: url('../i/clients__title-main-bg.png') no-repeat center;
+  }
+  
+  &__list {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        border-right: 1px solid #ececec;
+      }
+
+    &-inner {
+      position: relative;
+
+      &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: url('../i/clients__line-bg.png') no-repeat center;
+      background-size: cover;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: url('../i/clients__line-bg.png') no-repeat center;
+      background-size: cover;
+    }
+
+    }
+
+    &-item {
+      display: block;
+      padding: 30px;
+      text-align: center;
+      border-right: 1px solid #be494c;
+
+      img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+/*clients
+=======================================*/
 
 
 

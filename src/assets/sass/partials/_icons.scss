@@ -56,3 +56,19 @@
   @include sprite($d);
 }
 
+.icon-twitter {
+  @include sprite($twitter);
+}
+
+.icon-facebook {
+  @include sprite($facebook);
+}
+
+.icon-instagramm {
+  @include sprite($instagramm);
+}
+
+.icon-vk {
+  @include sprite($vk);
+}
+

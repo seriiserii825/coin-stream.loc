@@ -14,10 +14,9 @@ body{
 body {
   margin: 0;
   padding: 0;
-  padding-bottom: 400px;
   @include roboto-regular; 
   color: $text-color;
-  background: $bg-color;
+  background: #f2f2f2;
 }
 
 ul {
@@ -1409,6 +1408,8 @@ h2 {
 /*clients
 =======================================*/
 .clients {
+  margin-bottom: 80px;
+
   h5 {
     display: table;
     margin: 0 auto;
@@ -1475,6 +1476,177 @@ h2 {
   }
 }
 /*clients
+=======================================*/
+/*footer
+=======================================*/
+.footer-main {
+  padding-top: 90px;
+  min-height: 240px;
+  color: $white;
+  background: url('../i/footer-main.png') no-repeat top center;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media screen and (max-width: $lg) {
+       flex-wrap: wrap;
+    }    
+  }
+
+  &__content-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    @media screen and (max-width: $xl) {
+       flex-wrap: wrap;
+       margin-bottom: 60px;
+    }    
+
+    @media screen and (max-width: 570px) {
+       flex-direction: column;
+    }    
+  }
+
+  &__content-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media screen and (max-width: $xl) {
+       flex-wrap: wrap;
+    }   
+
+    @media screen and (max-width: 570px) {
+       padding: 0 15px;
+    }    
+
+    &-item {
+      @media screen and (max-width: $xl) {
+         margin-right: 40px;
+         margin-bottom: 30px;
+      }   
+    } 
+
+    &-item:first-child() {
+      width: 179px;
+    }
+
+    &-item:nth-child(2) {
+      width: 179px;
+    }
+
+    &-item:last-child() {
+      @media screen and (max-width: 530px) {
+          width: 200px;
+       }     
+    }
+
+    h5 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .logo {
+    width: 126px;
+    height: 89px;
+    background: url('../i/footer-logo.png') no-repeat center;
+
+    @media screen and (max-width: $xl) {
+       margin-right: 40px;
+       padding: 20px;
+    }    
+
+    @media screen and (max-width: $lg) {
+       margin-bottom: 40px;
+    }    
+  }
+
+  .footer-menu {
+    display: inline-block;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and (max-width: $xl) {
+       margin-bottom: 40px;
+    }    
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+
+      @media screen and (max-width: 530px) {
+         //display: block;
+      }    
+
+      &:first-child() {
+        a {
+          padding-left: 0;
+
+          @media screen and (max-width: $lg) {
+             padding-left: 20px;
+          }    
+        }
+      }
+
+      &:last-child() {
+        a {
+          &::after {
+            background: none;
+          }
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      display: block;
+      padding: 36px;
+      color: inherit;
+
+      @media screen and (max-width: $lg) {
+         padding: 20px;
+      }    
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 12px;
+        background: url('../i/footer-main-menu-arrow.png') no-repeat top center;
+      }
+    }
+  }
+
+  .socials {
+    display: table;
+
+    @media screen and (max-width: $xl) {
+       margin-left: auto;
+    }    
+
+    @media screen and (max-width: 570px) {
+       padding: 0 15px;
+    }    
+
+    .icon {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 14px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+/*footer
 =======================================*/
 
 

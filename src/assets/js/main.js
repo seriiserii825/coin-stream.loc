@@ -1,4 +1,7 @@
 $(function () {
+
+  /* clock in header
+  ====================================================*/
   var now = moment();
   var clock = document.getElementById("js-clock-content");
 
@@ -8,6 +11,15 @@ $(function () {
     clock.innerHTML = moment().tz("Europe/London").format('HH:mm:ss');
   }, 1000);
 
+  /* animations
+  ====================================================*/
+  var wow = new WOW(
+      {
+        offset:       80,          // distance to the element when triggering the animation (default is 0)
+        mobile:       false,       // trigger animations on mobile devices (default is true)
+      }
+  );
+  wow.init();
 
   /*
       https://www.jqueryscript.net/animation/Smooth-Mouse-Wheel-Scrolling-Plugin-With-jQuery-easeScroll.html

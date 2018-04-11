@@ -55,6 +55,9 @@
     "run-sequence": "^2.2.0",
     "svg2png": "^4.1.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.22.0",
+    "moment-timezone": "^0.5.14"
+  },
   "description": ""
 }

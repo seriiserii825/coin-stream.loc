@@ -1,4 +1,14 @@
 $(function () {
+  var now = moment();
+  var clock = document.getElementById("js-clock-content");
+
+  moment.locale('en-gb');
+
+  window.setInterval(function(){
+    clock.innerHTML = moment().tz("Europe/London").format('HH:mm:ss');
+  }, 1000);
+
+
   /*
       https://www.jqueryscript.net/animation/Smooth-Mouse-Wheel-Scrolling-Plugin-With-jQuery-easeScroll.html
       ===========================*/
@@ -26,9 +36,6 @@ $(function () {
   /*show tarrif list
   =======================================*/
   var jsItem = $('#js-tarrif .tarrif__item');
-  var jsItemContent = $('#js-tarrif .tarrif__item-content');
-  var jsItemList = $('#js-tarrif .tarrif__item-list');
-  var jsShowTarrifList = $('.show-tarrif-list');
 
   jsItem.on('mouseenter', function(){
     $(this).find('.tarrif__item-list').slideDown(600);
@@ -72,5 +79,5 @@ $(function () {
   ]
   });
 
-
 });
+
